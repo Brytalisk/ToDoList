@@ -7,7 +7,10 @@
 }
 
 :root {
-    --page-backgroudn-color: rgb(53, 156, 56);
+    --page-backgroud-color: rgb(53, 156, 56);
+    --link-color: rgb(0, 0, 0);
+    --heading-font: "Mukta Bold", sans-serif;
+    --nav-link-font: "Mukta Medium", sans-serif;
 }
 
 .container {
@@ -15,3 +18,6 @@
     margin: 0 auto;
 }
 
+h1 {
+    font-family: var(--heading-font);
+}
