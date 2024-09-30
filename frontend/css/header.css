@@ -27,6 +27,14 @@
 }
 
 /*Section of navigation*/
+.header-nav__create-task{
+    cursor: pointer;
+}
+
+.header-nav__create-task:hover {
+    text-decoration: underline;
+}
+
 .header-nav__list {
     display: flex;
     justify-content: space-around;

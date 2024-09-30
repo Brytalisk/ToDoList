@@ -7,10 +7,18 @@
 }
 
 :root {
-    --page-backgroud-color: rgb(53, 156, 56);
-    --link-color: rgb(0, 0, 0);
     --heading-font: "Mukta Bold", sans-serif;
     --nav-link-font: "Mukta Medium", sans-serif;
+    --text-font: "Roboto-Regular", sans-serif;
+    --page-backgroud-color: rgb(53, 156, 56);
+    --link-color: rgb(0, 0, 0);
+    --modal-outside-color: rgba(9, 139, 20, 0.53);
+    --active-close-button: rgb(0, 0, 0);
+    --modal-backgroud-color: rgb(255, 255, 255);
+    --modal-close-button: rgb(170, 170, 170);
+    --main-page-color: rgb(53, 156, 56);
+    --second-page-color: rgb(244, 195, 0);
+    --button-color: rgb(244, 195, 0);
 }
 
 .container {
