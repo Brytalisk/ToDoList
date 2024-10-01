@@ -1,16 +1,18 @@
 import { v4 as uuidv4 } from "uuid";
 
 export class Task {
-    private id: string;
+    private readonly id: string;
     private name: string;
     private description: string;
     private status: boolean;
+    private date: Date | null;
 
-     constructor(name: string, description: string) {
+     constructor(name: string, description: string, date?: Date | null) {
          this.id = uuidv4();
          this.name = name;
          this.description = description;
          this.status = false;
+         this.date = date;
      }
 
      get getId(): string {
@@ -31,6 +33,10 @@ export class Task {
 
      set setDescription(description: string) {
          this.description = description;
+     }
+
+     get getDate(): Date {
+         return this.date;
      }
 
      get getStatus(): boolean {
