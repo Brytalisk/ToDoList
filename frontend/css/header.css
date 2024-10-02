@@ -2,12 +2,12 @@
     position: relative;
     z-index: 1;
     background-color: var(--page-backgroud-color);
+    outline: 5px solid var(--outline-color);
 }
 
 .header__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
 }
 
 .header__logo-plus-name {
@@ -24,6 +24,7 @@
 }
 .header__name {
     margin : 20px 5px;
+    cursor: default;
 }
 
 /*Section of navigation*/

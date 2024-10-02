@@ -19,6 +19,8 @@
     --main-page-color: rgb(53, 156, 56);
     --second-page-color: rgb(244, 195, 0);
     --button-color: rgb(244, 195, 0);
+    --outline-color: rgb(0, 0, 0);
+    --more-invisible-second-page-color: rgba(244, 195, 0, 0.80);
 }
 
 .container {
@@ -28,4 +30,8 @@
 
 h1 {
     font-family: var(--heading-font);
+}
+
+html {
+    background-color: var(--second-page-color);
 }

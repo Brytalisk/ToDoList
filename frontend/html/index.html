@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
     <link rel="stylesheet" href="../css/index.css">
-    <script type="module" src="../../backend"></script>
 </head>
 <header class="header">
     <div class="container">
@@ -14,10 +13,15 @@
     </div>
 </header>
 <body>
+<section class="body-wrapper">
 <div class="container body-container">
 <div data-include="modal-window.partial.html"></div>
+    <div class="list-of-tasks__container">
+        <div data-include="current-tasks.html"></div>
+    </div>
 </div>
 <script src="../js/index.js"></script>
 <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
+</section>
 </body>
 </html>

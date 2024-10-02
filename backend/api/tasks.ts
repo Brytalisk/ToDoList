@@ -16,7 +16,6 @@ export function handleTaskRequest(req: IncomingMessage, res: ServerResponse) {
             const newTask = new Task(name, description, date ? new Date(date) : undefined);  // Створюємо новий Task
             tasks.push(newTask);
             console.log("Everything is good" + newTask.getName);
-
             res.writeHead(201, { "Content-Type": "application/json" });
             res.end(JSON.stringify(newTask));
         } catch (error) {
