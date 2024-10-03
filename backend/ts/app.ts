@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    if (req.url?.startsWith("/api/tasks") && req.method === "POST") {
+    if (req.url?.startsWith("/api/tasks")) {
         handleTaskRequest(req, res);
     } else {
         res.writeHead(404, { "Content-Type": "text/plain" });

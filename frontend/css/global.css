@@ -16,6 +16,10 @@
     --active-close-button: rgb(0, 0, 0);
     --modal-backgroud-color: rgb(255, 255, 255);
     --modal-close-button: rgb(170, 170, 170);
+    --task-close-button: rgb(170, 170, 170);
+    --task-card-backgroud-color: rgb(255, 255, 255);
+    --task-card-checked-backgroud-color: rgba(202, 191, 191, 0.56);
+    --task-close-button-hover: rgb(121, 108, 112);
     --main-page-color: rgb(53, 156, 56);
     --second-page-color: rgb(244, 195, 0);
     --button-color: rgb(244, 195, 0);
@@ -28,7 +32,7 @@
     margin: 0 auto;
 }
 
-h1 {
+h1 , h2 {
     font-family: var(--heading-font);
 }
 

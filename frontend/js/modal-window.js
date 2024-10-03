@@ -1,4 +1,4 @@
-export const modalWindow = document.querySelector(".modal-window");
+const modalWindow = document.querySelector(".modal-window");
 const addTaskContentContainer = document.querySelector(".header-nav__create-task");
 const closeIcon = document.querySelector(".modal-window__close-button");
 
@@ -6,7 +6,7 @@ function openModalWindow() {
     modalWindow.classList.add("modal-window--open");
 }
 
-export function closeModalWindow() {
+function closeModalWindow() {
     modalWindow.classList.remove("modal-window--open")
 }
 

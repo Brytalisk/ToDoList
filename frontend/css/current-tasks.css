@@ -33,3 +33,88 @@
     width: 70%;
     height: fit-content;
 }
+
+/*Дизайн для тасок*/
+.task-card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 70%;
+    background-color: var(--task-card-backgroud-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: 3px solid var(--outline-color);
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+}
+
+.task-card--completed {
+    background-color: var(--task-card-checked-backgroud-color);
+}
+
+.task-checkbox__container {
+    flex-shrink: 0;
+}
+
+.task-checkbox {
+    width: 41px;
+    height: 35px;
+    padding: 8px 16px;
+    accent-color: #4caf50;
+    cursor: pointer;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 16px;
+    max-width: 300px;
+    align-items: center;
+    text-align: center;
+}
+
+.task-title {
+    font-family: var(--heading-font);
+    flex-grow: 1;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+    font-size: 20px;
+    max-width: 200px;
+    color: #333;
+    list-style: none;
+    margin-left: 50px;
+}
+.task-description {
+    font-family: var(--text-font);
+    flex-grow: 1;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+    font-size: 14px;
+}
+.task-title:hover {
+    cursor: pointer;
+    color: var(--link-color);
+}
+
+.task-delete-update {
+    background-color: var(--task-close-button);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.task-delete-update:hover {
+    background-color: var(--task-close-button-hover);
+}
+
+.task-display-none {
+    display: none;
+}

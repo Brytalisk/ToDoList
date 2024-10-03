@@ -4,6 +4,15 @@ import { Task } from "../ts/Task";
 let tasks: Task[] = [];
 
 export function handleTaskRequest(req: IncomingMessage, res: ServerResponse) {
+    const urlParts = req.url?.split("/");
+    const taskId = urlParts && urlParts.length > 3 ? urlParts[3] : null;
+
+    //видалення задачі
+    if (req.method === "DELETE" && taskId) {
+        tasks = tasks.filter(task => task.getId !== taskId);
+        res.writeHead(204);
+        return res.end();
+    }
     let body = "";
 
     req.on("data", chunk => {
