@@ -6,7 +6,7 @@ function openModalWindow() {
     modalWindow.classList.add("modal-window--open");
 }
 
-function closeModalWindow() {
+export function closeModalWindow() {
     modalWindow.classList.remove("modal-window--open")
 }
 

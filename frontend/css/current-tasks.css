@@ -4,15 +4,6 @@
     align-items: center;
 }
 
-.task-card {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    align-items: flex-start;
-    min-width: 50%;
-    min-height: 40px;
-}
-
 .list-of-tasks__container {
     display: flex;
     width: 80%;
@@ -36,41 +27,35 @@
 
 /*Дизайн для тасок*/
 .task-card {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: space-between;
-    min-width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
     background-color: var(--task-card-backgroud-color);
     border: 1px solid #ddd;
     border-radius: 8px;
     outline: 3px solid var(--outline-color);
     padding: 16px;
     margin-bottom: 12px;
+    max-width: 100%;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.task-card:hover {
-    transform: translateY(-5px);
+.task-box__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.task-card--completed {
-    background-color: var(--task-card-checked-backgroud-color);
-}
-
-.task-checkbox__container {
-    flex-shrink: 0;
-}
-
-.task-checkbox {
-    width: 41px;
-    height: 35px;
+.task-box__checkbox input{
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
     padding: 8px 16px;
     accent-color: #4caf50;
     cursor: pointer;
 }
 
-.task-info {
+.task-card__text{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -80,7 +65,7 @@
     text-align: center;
 }
 
-.task-title {
+.task-card__title {
     font-family: var(--heading-font);
     flex-grow: 1;
     overflow-wrap: break-word;
@@ -91,30 +76,25 @@
     list-style: none;
     margin-left: 50px;
 }
-.task-description {
-    font-family: var(--text-font);
-    flex-grow: 1;
-    overflow-wrap: break-word;
-    line-height: 1.4;
+
+.task-card__description {
     font-size: 14px;
-}
-.task-title:hover {
-    cursor: pointer;
-    color: var(--link-color);
-}
-
-.task-delete-update {
-    background-color: var(--task-close-button);
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+    margin: 0;
+    overflow-wrap: break-word; /* Переносимо довгі слова */
+    word-wrap: break-word; /* Переносимо слова, які не вміщуються */
+    max-height: 40px;
+    max-width: 90%;
+    overflow: hidden; /* Сховуємо все, що виходить за межі */
+    text-overflow: ellipsis; /* Додаємо три крапки в кінці, якщо текст не вміщується */
 }
 
-.task-delete-update:hover {
-    background-color: var(--task-close-button-hover);
+.task-card__delete {
+    display: flex;
+    width: 40px;
+    height: 40px;
 }
 
-.task-display-none {
-    display: none;
-}
+
+
+
+
