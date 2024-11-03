@@ -12,7 +12,7 @@ export class Task {
          this.name = name;
          this.description = description;
          this.status = false;
-         this.date = date;
+         this.date = date ? date : null;
      }
 
      get getId(): string {
@@ -35,7 +35,7 @@ export class Task {
          this.description = description;
      }
 
-     get getDate(): Date {
+     get getDate(): Date | null {
          return this.date;
      }
 

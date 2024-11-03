@@ -3,8 +3,12 @@ import * as fs from "fs";
 import * as path from "path";
 import {IncomingMessage, ServerResponse} from "node:http";
 import {createTask} from "../api/tasks";
+import {connectToDatabase} from "../database/db";
 
 const PORT = 3000;
+
+
+connectToDatabase();// Connect to MongoDB
 
 const server = http.createServer((req: IncomingMessage, res: ServerResponse) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
