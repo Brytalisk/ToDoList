@@ -1,7 +1,6 @@
 import mongoose, { Document, Schema } from "mongoose";
 
 export interface ITask extends Document {
-    id: string;
     name: string;
     description: string;
     status: boolean;

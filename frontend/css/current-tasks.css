@@ -39,13 +39,13 @@
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.task-box__checkbox {
+.task-card__checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.task-box__checkbox input{
+.task-card__checkbox input{
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -94,6 +94,12 @@
     height: 40px;
 }
 
+.task-card__delete-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
 
 
